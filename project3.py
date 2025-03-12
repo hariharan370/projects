@@ -26,7 +26,7 @@ class ParkingLot:
         print(f"Vehicle {vehicle_number} not found in the parking lot.")
 
     def display_parking(self):
-        """Display the current parking lot status."""
+      
         print("\nCurrent Parking Status:")
         for i in range(self.lanes):
             print(f"Lane {i+1}: ", end="")
