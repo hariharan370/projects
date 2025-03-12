@@ -2,11 +2,11 @@ class ParkingLot:
     def _init_(self, lanes=5, spaces_per_lane=4):
         self.lanes = lanes
         self.spaces_per_lane = spaces_per_lane
-        # Initialize parking lot as a 2D list with None (empty spaces)
+       
         self.parking = [[None for _ in range(spaces_per_lane)] for _ in range(lanes)]
 
     def park_vehicle(self, vehicle_number):
-        """Find the first available space and park the vehicle."""
+       
         for i in range(self.lanes):
             for j in range(self.spaces_per_lane):
                 if self.parking[i][j] is None:  # Empty space found
@@ -16,7 +16,7 @@ class ParkingLot:
         print("Parking Full! No space available.")
 
     def exit_vehicle(self, vehicle_number):
-        """Find the vehicle and remove it from the parking lot."""
+     
         for i in range(self.lanes):
             for j in range(self.spaces_per_lane):
                 if self.parking[i][j] == vehicle_number:  # Vehicle found
@@ -35,10 +35,10 @@ class ParkingLot:
             print()
         print("-" * 40)
 
-# Create a ParkingLot instance
+
 parking_lot = ParkingLot()
 
-# User interaction loop
+
 while True:
     print("\nOptions: 1. Park Vehicle  2. Exit Vehicle  3. Display Parking  4. Exit Program")
     choice = input("Enter your choice: ")
