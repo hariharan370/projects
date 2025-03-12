@@ -10,12 +10,12 @@ class Student:
     def _str_(self):
         return f"{self.regno}\t{self.name}\t{self.total}"
 
-# Get the number of students2
+
 
 num_students = int(input("Enter the number of students: "))
 students_list = []
 
-# Get student details from user
+
 for i in range(num_students):
     print(f"\nEnter details for Student {i+1}:")
     name = input("Name: ")
@@ -24,14 +24,11 @@ for i in range(num_students):
     mark2 = int(input("Mark 2: "))
     mark3 = int(input("Mark 3: "))
 
-    # Create Student object and add to the list
     student = Student(name, regno, mark1, mark2, mark3)
-    students_list.append(student)
-
-# Sort students by total marks (descending order)
+ 
 students_list.sort(key=lambda x: x.total, reverse=True)
 
-# Print student details as rank-wise
+
 print("\nRank\tRegNo\tName\tTotal Marks")
 print("-" * 40)
 for rank, student in enumerate(students_list, start=1):
